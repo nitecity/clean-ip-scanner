@@ -31,14 +31,9 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
     </div>
     <div style="position: relative;">
           <button onclick="copyToClipboard('code5')" style="position: absolute; right: 0; top: 0;"></button>
-          <pre id="code5"><code>apt install python3-pip</code></pre>
+          <pre id="code5"><code>apt install colorama</code></pre>
     </div>
     
-3. Install the required `colorama` package:
-   <div style="position: relative;">
-          <button onclick="copyToClipboard('code6')" style="position: absolute; right: 0; top: 0;"></button>
-          <pre id="code6"><code>pip install colorama</code></pre>
-    </div>
 
 ## Options
 
@@ -56,14 +51,26 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
   
   
 - **Scans 5 IPs in the IP range that starts with 104:**
-  - Click to copy: ```py scan.py -n 5 -r 104```
+         <div style="position: relative;">
+          <button onclick="copyToClipboard('code8')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code8"><code>py scan.py -n 5 -r 104</code></pre>
+        </div>
   
 - **Scans 5 IPs for each in 104, 185, 172 IP ranges:**
-  - Click to copy: ```py scan.py -n 5 -r 104 -r 185 -r 172```
+  <div style="position: relative;">
+          <button onclick="copyToClipboard('code9')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code9"><code>py scan.py -n 5 -r 104 -r 185 -r 172</code></pre>
+        </div>
   
 - **Scans 5 IPs in a specific IP range (e.g., `104.16.13.0/24`):**
-  - Click to copy: ```py scan.py -n 5 104.16.13.0/24```
+  <div style="position: relative;">
+          <button onclick="copyToClipboard('code9')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code9"><code>py scan.py -n 5 104.16.13.0/24</code></pre>
+</div>
   
 - **Scans 256 IPs in a random IP range:**
-  - Click to copy: ```py scan.py```
+  <div style="position: relative;">
+          <button onclick="copyToClipboard('code10')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code10"><code>py scan.py</code></pre>
+</div>
 
