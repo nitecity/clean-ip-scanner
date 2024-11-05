@@ -19,7 +19,7 @@ def run():
         for i,arg in enumerate(args):
             if arg == '-h' or arg == '--help':
                 print(f'Windows:        {Fore.LIGHTCYAN_EX}[py scan.py      -n 5 -r 104]{Style.RESET_ALL}')
-                print(f'Linux/Android:  {Fore.LIGHTCYAN_EX}[python3 scan.py -n 5 -r 104]{Style.RESET_ALL}')
+                print(f'Linux:  {Fore.LIGHTCYAN_EX}[python3 scan.py -n 5 -r 104]{Style.RESET_ALL}')
                 print('-n   Number of IPs to be scanned. 1-256')
                 print('-r   Optional IP range.')
                 print(f'{Fore.LIGHTCYAN_EX}[py scan.py -n 10 -r 104 -r 203 -r 172 -r 45]{Style.RESET_ALL}\nScans in more than 1 IP range.')
