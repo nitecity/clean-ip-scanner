@@ -16,12 +16,29 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
 ### Linux
 
 1. Update package lists:
-    ```apt update```
+        <div style="position: relative;">
+          <button onclick="copyToClipboard('code2')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code2"><code>apt update</code></pre>
+        </div>
 2. Install Python and pip:
-    - Click to copy: ```apt install python3```
-    - Click to copy: ```apt install python3-pip```
+    <div style="position: relative;">
+          <button onclick="copyToClipboard('code3')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code3"><code>apt install python3</code></pre>
+    </div>
+    <div style="position: relative;">
+          <button onclick="copyToClipboard('code4')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code4"><code>apt install python3-pip</code></pre>
+    </div>
+    <div style="position: relative;">
+          <button onclick="copyToClipboard('code5')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code5"><code>apt install python3-pip</code></pre>
+    </div>
+    
 3. Install the required `colorama` package:
-    - Click to copy: ```pip install colorama```
+   <div style="position: relative;">
+          <button onclick="copyToClipboard('code6')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code6"><code>pip install colorama</code></pre>
+    </div>
 
 ## Options
 
@@ -32,7 +49,11 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
 ## Examples
 
 - **Scans 5 IPs in a random IP range:**
-  - Click to copy: ```py scan.py -n 5```
+       <div style="position: relative;">
+          <button onclick="copyToClipboard('code7')" style="position: absolute; right: 0; top: 0;"></button>
+          <pre id="code7"><code>py scan.py -n 5</code></pre>
+        </div>
+  
   
 - **Scans 5 IPs in the IP range that starts with 104:**
   - Click to copy: ```py scan.py -n 5 -r 104```
