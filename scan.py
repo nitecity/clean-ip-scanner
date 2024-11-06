@@ -71,6 +71,6 @@ def run():
             else:
                 print(f"{Fore.LIGHTRED_EX}{iprange} NO.{res}{Style.RESET_ALL}")
     if best_ip != "":
-        print(f"{Fore.LIGHTGREEN_EX}The Lowest Ping:\n{best_ip} {Fore.LIGHTMAGENTA_EX}{lowest_latency}ms{Style.RESET_ALL}")
+        print(f"{Fore.LIGHTGREEN_EX}Best:\n{best_ip} {Fore.LIGHTMAGENTA_EX}{lowest_latency}ms{Style.RESET_ALL}")
 
 run()
