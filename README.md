@@ -4,23 +4,12 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
 
 ## Installation
 
-### Windows
-
 1. Download and install Python from here: [Python Downloads](https://www.python.org/downloads/)
 2. Install the required `colorama` package:
         <div style="position: relative;">
           <button onclick="copyToClipboard('code1')" style="position: absolute; right: 0; top: 0;"></button>
           <pre id="code1"><code>pip install colorama</code></pre>
         </div>
-
-### Linux
-
-- <div style="position: relative;">
-        <button onclick="copyToClipboard('code5')" style="position: absolute; right: 0; top: 0;"></button>
-        <pre id="code5"><code>pip install colorama</code></pre>
-</div>
-    
-
 ## Options
 
 - **`-n <NUMBER>`**: Specify the number of IPs to scan. Range: `[1 - 256]`
