@@ -45,6 +45,7 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
 </div>
   
 - **Scans 256 IPs in a random IP range:**
+  
   <div style="position: relative;">
           <button onclick="copyToClipboard('code10')" style="position: absolute; right: 0; top: 0;"></button>
           <pre id="code10"><code>py scan.py</code></pre>
