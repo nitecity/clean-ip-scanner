@@ -1,4 +1,4 @@
-# Clean IP Scanner
+# Find Clean IPs From Cloudflare
 
 This is a super simple script to scan and find Clean IPs in IP ranges behind Cloudflare.
 
