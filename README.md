@@ -15,24 +15,10 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
 
 ### Linux
 
-1. Update package lists:
-        <div style="position: relative;">
-          <button onclick="copyToClipboard('code2')" style="position: absolute; right: 0; top: 0;"></button>
-          <pre id="code2"><code>apt update</code></pre>
-        </div>
-2. Install Python and pip:
-    <div style="position: relative;">
-          <button onclick="copyToClipboard('code3')" style="position: absolute; right: 0; top: 0;"></button>
-          <pre id="code3"><code>apt install python3</code></pre>
-    </div>
-    <div style="position: relative;">
-          <button onclick="copyToClipboard('code4')" style="position: absolute; right: 0; top: 0;"></button>
-          <pre id="code4"><code>apt install python3-pip</code></pre>
-    </div>
-    <div style="position: relative;">
-          <button onclick="copyToClipboard('code5')" style="position: absolute; right: 0; top: 0;"></button>
-          <pre id="code5"><code>apt install colorama</code></pre>
-    </div>
+- <div style="position: relative;">
+        <button onclick="copyToClipboard('code5')" style="position: absolute; right: 0; top: 0;"></button>
+        <pre id="code5"><code>apt install colorama</code></pre>
+</div>
     
 
 ## Options
