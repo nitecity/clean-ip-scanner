@@ -17,7 +17,7 @@ This is a super simple script to scan and find Clean IPs in IP ranges behind Clo
 
 - <div style="position: relative;">
         <button onclick="copyToClipboard('code5')" style="position: absolute; right: 0; top: 0;"></button>
-        <pre id="code5"><code>apt install colorama</code></pre>
+        <pre id="code5"><code>pip install colorama</code></pre>
 </div>
     
 
