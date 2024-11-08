@@ -43,9 +43,12 @@ def run():
                             line = line.strip()
                             if re.match(fr'^{arg}', line):
                                 first_eight.append(line)
-                    random_first_eight: str = random.choice(first_eight)
-                    list_of_ipranges.append(random_first_eight)
-                    print(f'{Fore.GREEN}Scanning in "{random_first_eight}"...{Style.RESET_ALL}')
+                    if first_eight:
+                        random_first_eight: str = random.choice(first_eight)
+                        list_of_ipranges.append(random_first_eight)
+                        print(f'{Fore.GREEN}Scanning in "{random_first_eight}"...{Style.RESET_ALL}')
+                    else:
+                        print(f"{Fore.LIGHTRED_EX}{arg} does not exist in the library{Style.RESET_ALL}")
             if re.match(pattern, arg):
                 if not arg in list_of_ipranges:
                     list_of_ipranges.append(arg)
