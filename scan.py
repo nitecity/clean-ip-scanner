@@ -41,7 +41,7 @@ def run():
                     with open(ipranges_file) as a:
                         for line in a:
                             line = line.strip()
-                            if re.match(fr'^{arg}', line):
+                            if re.match(fr'^{arg}\.', line):
                                 first_eight.append(line)
                     if first_eight:
                         random_first_eight: str = random.choice(first_eight)
