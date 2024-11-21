@@ -64,7 +64,7 @@ def run():
         for i in range(howmany):
             iprange = re.sub(r'\d+/\d+$|\d+$', str(all[i]) , ranges)
             before = int(round(time.time() * 1000))
-            res = os.system(f'curl -o response.log -s -I --max-time 0.5 http://{iprange}/cdn-cgi/trace')
+            res = os.system(f'curl -o response.log -s --max-time 0.5 http://{iprange}/cdn-cgi/trace')
             latency = int(round(time.time() * 1000)) - before
             if res == 0:
                 if latency < lowest_latency:
