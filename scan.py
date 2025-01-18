@@ -6,7 +6,7 @@ import random
 from colorama import Fore, Style
 ipranges_file: str = 'ipranges.txt'
 
-def run():
+def main():
     pattern: str = r'^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(/\d{1,2})?$'
     args: list[str] = sys.argv
     all: list[int] = list(range(256))
@@ -76,4 +76,4 @@ def run():
     if best_ip != "":
         print(f"{Fore.LIGHTGREEN_EX}Best:\n{best_ip} {Fore.LIGHTMAGENTA_EX}{lowest_latency}ms{Style.RESET_ALL}")
 
-run()
+main()
