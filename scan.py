@@ -14,3 +14,5 @@ except ImportError:
     sys.exit(1)
 
 IP_RANGES_FILE = 'ipranges.txt'
+DEAUALT_SCAN-COUNT = 256
+DEFAULT_TIMEOUT = 1.0
