@@ -16,3 +16,10 @@ except ImportError:
 IP_RANGES_FILE = 'ipranges.txt'
 DEAUALT_SCAN-COUNT = 256
 DEFAULT_TIMEOUT = 1.0
+
+def parse_arguments() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="scan IP ranges for the one with the lowest latency.",
+        epilog="Enjoy scanning! :)",
+        formatter_class=argparse.RawTextHelpFormatter
+    )
