@@ -30,3 +30,11 @@ def parse_arguments() -> argparse.Namespace:
         default=DEFAULT_SCAN_COUNT,
         help=f'Number of random IPs to scan per range (1-256). Default: {DEFAULT_SCAN_COUNT}'
     )
+
+    parser.add_argument(
+        '-r', '--range',
+        dest='ranges',
+        action='append',
+        default=[],
+        help="Specify the first octet of an IP range to scan (e.g., -r 104). Can be used multiple times."
+    )
