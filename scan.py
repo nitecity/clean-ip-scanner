@@ -14,7 +14,7 @@ except ImportError:
     sys.exit(1)
 
 IP_RANGES_FILE = 'ipranges.txt'
-DEAUALT_SCAN-COUNT = 256
+DEFAULT_SCAN_COUNT = 256
 DEFAULT_TIMEOUT = 1.0
 
 def parse_arguments() -> argparse.Namespace:
@@ -22,4 +22,11 @@ def parse_arguments() -> argparse.Namespace:
         description="scan IP ranges for the one with the lowest latency.",
         epilog="Enjoy scanning! :)",
         formatter_class=argparse.RawTextHelpFormatter
+    )
+
+    parser.add_argument(
+        '-n', '--count',
+        type=int,
+        default=DEFAULT_SCAN_COUNT,
+        help=f'Number of random IPs to scan per range (1-256). Default: {DEFAULT_SCAN_COUNT}'
     )
