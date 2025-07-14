@@ -45,3 +45,5 @@ def parse_arguments() -> argparse.Namespace:
         default=[],
         help="One or more specific CIDR ranges to scan (e.g., 45.142.120.0/24)."
     )
+
+    return parser.parse_args()
