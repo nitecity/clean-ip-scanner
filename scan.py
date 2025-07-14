@@ -38,3 +38,10 @@ def parse_arguments() -> argparse.Namespace:
         default=[],
         help="Specify the first octet of an IP range to scan (e.g., -r 104). Can be used multiple times."
     )
+
+    parser.add_argument(
+        'cidr_ranges',
+        nargs='*',
+        default=[],
+        help="One or more specific CIDR ranges to scan (e.g., 45.142.120.0/24)."
+    )
