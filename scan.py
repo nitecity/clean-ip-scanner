@@ -49,7 +49,7 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 def get_scan_targets(args: argparse.Namespace) -> list[str]:
-    target_network = []
+    target_networks = []
 
     try:
         with open(IP_RANGES_FILE) as f:
@@ -61,6 +61,8 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
     for cidr in args.cidr_ranges:
         try:
             ipaddress.ip_network(cidr, strict=False)
+            target_networks.append(cidr)
+            print(f"{Fore.GREEN}Added specified range: {cidr}")
         except ValueError:
-            ""
+            print(f"{Fore.YELLOW}Warning: Skipping invalid CIDR format '{cidr}'.")
 
