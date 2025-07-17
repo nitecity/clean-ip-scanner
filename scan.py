@@ -66,3 +66,14 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
         except ValueError:
             print(f"{Fore.YELLOW}Warning: Skipping invalid CIDR format '{cidr}'.")
 
+    for r in args.ranges:
+        matching_ranges = [line for line in all_lines if line.startswith(f"{r}.")]
+        if matching_ranges:
+            chosen_range = random.choice(matching_ranges)
+            target_networks.append(chosen_range)
+            print(f"{Fore.GREEN}Selected random range for octet {r}: {chosen_range}")
+        else:
+            print(f"{Fore.YELLOW}Warning: No ranges found for first octet '{r}' in {IP_RANGES_FILE}.")
+
+    
+
