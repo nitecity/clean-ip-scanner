@@ -75,5 +75,11 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
         else:
             print(f"{Fore.YELLOW}Warning: No ranges found for first octet '{r}' in {IP_RANGES_FILE}.")
 
-    
+    if not target_networks:
+        if not all_lines:
+            print(f"{Fore.RED}Error: {IP_RANGES_FILE} is empty. No ranges to scan.")
+            sys.exit(1)
+        random_range = random.choice(all_lines)
+        target_networks.append(random_range)
+        print(f"{Fore.YELLOW}No range specified. Using random default: {random_range}")
 
