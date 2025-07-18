@@ -86,3 +86,21 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
     ips_to_scan = []
     scan_count = max(1, min(args.count, 256))
 
+    for network_str in target_networks:
+        try:
+            network = ipaddress.ip_network(network_str, strict=False)
+            available_hosts = list(network.hosts())
+
+            if not available_hosts:
+                print(f"{Fore.YELLOW}Warning: Network {network_str} has no scannable host IPs. Skipping.")
+                continue
+
+            sample_size = min(scan_count, len(available_hosts))
+            sampled_hosts = random.sample(available_hosts, k=sample_size)
+            ips_to_scan.extend([str(ip) for ip in sampled_hosts])
+
+        except ValueError:
+            print(f"{Fore.YELLOW}Warning: Skipping invalid network range '{network_str}'.")
+
+    return list(set(ips_to_scan))
+
