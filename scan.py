@@ -83,3 +83,6 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
         target_networks.append(random_range)
         print(f"{Fore.YELLOW}No range specified. Using random default: {random_range}")
 
+    ips_to_scan = []
+    scan_count = max(1, min(args.count, 256))
+
