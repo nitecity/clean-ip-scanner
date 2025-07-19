@@ -104,3 +104,11 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
 
     return list(set(ips_to_scan))
 
+def scan_ip(ip: str, timeout: float) -> tuple[str, int | None, bool]:
+    command = [
+        'curl',
+        '-s',
+        '--max-time', str(timeout),
+        f'http://{ip}/cdn-cgi/trace'
+    ]
+
