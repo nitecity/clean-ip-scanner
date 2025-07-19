@@ -111,4 +111,5 @@ def scan_ip(ip: str, timeout: float) -> tuple[str, int | None, bool]:
         '--max-time', str(timeout),
         f'http://{ip}/cdn-cgi/trace'
     ]
+    start_time = time.perf_counter()
 
