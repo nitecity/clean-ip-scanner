@@ -113,3 +113,16 @@ def scan_ip(ip: str, timeout: float) -> tuple[str, int | None, bool]:
     ]
     start_time = time.perf_counter()
 
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, check=False, timeout=timeout + 0.1)
+        latency = int((time.perf_counter() - start_time) * 1000)
+
+        if result.returncode == 0 and 'h=' in result.stdout:
+            return ip, latency, True
+        else:
+            return ip, None, False
+    except subprocess.TimeoutExpired:
+        return ip, None, False
+    except Exception:
+        return ip, None, False
+
