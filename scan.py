@@ -126,3 +126,17 @@ def scan_ip(ip: str, timeout: float) -> tuple[str, int | None, bool]:
     except Exception:
         return ip, None, False
 
+def main():
+    args = parse_arguments()
+    ips_to_scan = get_scan_targets(args)
+
+    if not ips_to_scan:
+        print(f"{Fore.RED}No valid IP addresses to scan. Exiting.")
+        return
+    
+    print(f"\n{Fore.CYAN}--- Starting scan on {len(ips_to_scan)} total IPs ---")
+
+    best_ip = None
+    lowest_latency = float('inf')
+
+    
