@@ -139,4 +139,32 @@ def main():
     best_ip = None
     lowest_latency = float('inf')
 
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        future_to_ip = {executor.submit(scan_ip, ip, DEFAULT_TIMEOUT): ip for ip in ips_to_scan}
+
+        for future in as_completed(future_to_ip):
+            ip, latency, success = future.result()
+            if success:
+                print(f"{Fore.CYAN}{ip:<18} {Fore.GREEN}OK {Style.BRIGHT}{latency:>4}ms{Style.RESET_ALL}")
+                if latency < lowest_latency:
+                    lowest_latency = latency
+                    best_ip = ip
+            else:
+                print(f"{Fore.RED}{ip:<18} FAILED")
     
+    if best_ip:
+        print(f"\n{Fore.GREEN}--- Best IP Found ---")
+        print(f"{Style.BRIGHT}{best_ip}{Style.RESET_ALL} with a latency of {Fore.MAGENTA}{lowest_latency}ms")
+        print("\n--- Pinging Best IP ---")
+
+        count_flag = '-n' if sys.platform == 'win32' else '-c'
+        ping_command = ['ping', count_flag, '10', best_ip]
+
+        try:
+            subprocess.run(ping_command, check=True)
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            print(f"{Fore.RED}Could not execute ping command. Please ping the IP manually.")
+
+
+if __name__ == "__main__":
+    main()
