@@ -15,7 +15,8 @@ except ImportError:
 
 RED = Fore.RED
 GREEN = Fore.GREEN
-
+YELLOW = Fore.YELLOW
+CYAN = Fore.CYAN
 
 IP_RANGES_FILE = 'ipranges.txt'
 DEFAULT_SCAN_COUNT = 256
