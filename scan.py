@@ -13,6 +13,10 @@ except ImportError:
     print("colorama not found. Please install it using: pip install colrama")
     sys.exit(1)
 
+RED = Fore.RED
+GREEN = Fore.GREEN
+
+
 IP_RANGES_FILE = 'ipranges.txt'
 DEFAULT_SCAN_COUNT = 256
 DEFAULT_TIMEOUT = 1.0
