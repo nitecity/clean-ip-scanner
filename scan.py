@@ -62,7 +62,7 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
         with open(IP_RANGES_FILE) as f:
             all_lines = [line.strip() for line in f if line.strip()]
     except FileNotFoundError:
-        print(f"{Fore.RED}Error: The IP ranges file '{IP_RANGES_FILE}' was not found.")
+        print(f"{RED}Error: The IP ranges file '{IP_RANGES_FILE}' was not found.")
         sys.exit(1)
 
     for cidr in args.cidr_ranges:
