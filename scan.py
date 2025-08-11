@@ -69,9 +69,9 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
         try:
             ipaddress.ip_network(cidr, strict=False)
             target_networks.append(cidr)
-            print(f"{Fore.GREEN}Added specified range: {cidr}")
+            print(f"{GREEN}Added specified range: {cidr}")
         except ValueError:
-            print(f"{Fore.YELLOW}Warning: Skipping invalid CIDR format '{cidr}'.")
+            print(f"{YELLOW}Warning: Skipping invalid CIDR format '{cidr}'.")
 
     for r in args.ranges:
         matching_ranges = [line for line in all_lines if line.startswith(f"{r}.")]
