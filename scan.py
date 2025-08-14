@@ -78,9 +78,9 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
         if matching_ranges:
             chosen_range = random.choice(matching_ranges)
             target_networks.append(chosen_range)
-            print(f"{Fore.GREEN}Selected random range for octet {r}: {chosen_range}")
+            print(f"{GREEN}Selected random range for octet {r}: {chosen_range}")
         else:
-            print(f"{Fore.YELLOW}Warning: No ranges found for first octet '{r}' in {IP_RANGES_FILE}.")
+            print(f"{YELLOW}Warning: No ranges found for first octet '{r}' in {IP_RANGES_FILE}.")
 
     if not target_networks:
         if not all_lines:
