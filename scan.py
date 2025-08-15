@@ -84,7 +84,7 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
 
     if not target_networks:
         if not all_lines:
-            print(f"{Fore.RED}Error: {IP_RANGES_FILE} is empty. No ranges to scan.")
+            print(f"{RED}Error: {IP_RANGES_FILE} is empty. No ranges to scan.")
             sys.exit(1)
         random_range = random.choice(all_lines)
         target_networks.append(random_range)
