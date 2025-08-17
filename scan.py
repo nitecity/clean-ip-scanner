@@ -99,7 +99,7 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
             available_hosts = list(network.hosts())
 
             if not available_hosts:
-                print(f"{Fore.YELLOW}Warning: Network {network_str} has no scannable host IPs. Skipping.")
+                print(f"{YELLOW}Warning: Network {network_str} has no scannable host IPs. Skipping.")
                 continue
 
             sample_size = min(scan_count, len(available_hosts))
