@@ -107,7 +107,7 @@ def get_scan_targets(args: argparse.Namespace) -> list[str]:
             ips_to_scan.extend([str(ip) for ip in sampled_hosts])
 
         except ValueError:
-            print(f"{Fore.YELLOW}Warning: Skipping invalid network range '{network_str}'.")
+            print(f"{YELLOW}Warning: Skipping invalid network range '{network_str}'.")
 
     return list(set(ips_to_scan))
 
