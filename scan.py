@@ -152,7 +152,7 @@ def main():
         for future in as_completed(future_to_ip):
             ip, latency, success = future.result()
             if success:
-                print(f"{Fore.CYAN}{ip:<18} {Fore.GREEN}OK {Style.BRIGHT}{latency:>4}ms{Style.RESET_ALL}")
+                print(f"{CYAN}{ip:<18} {Fore.GREEN}OK {Style.BRIGHT}{latency:>4}ms{Style.RESET_ALL}")
                 if latency < lowest_latency:
                     lowest_latency = latency
                     best_ip = ip
