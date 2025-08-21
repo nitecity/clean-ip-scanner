@@ -141,7 +141,7 @@ def main():
         print(f"{RED}No valid IP addresses to scan. Exiting.")
         return
     
-    print(f"\n{Fore.CYAN}--- Starting scan on {len(ips_to_scan)} total IPs ---")
+    print(f"\n{CYAN}--- Starting scan on {len(ips_to_scan)} total IPs ---")
 
     best_ip = None
     lowest_latency = float('inf')
