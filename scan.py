@@ -160,7 +160,7 @@ def main():
                 print(f"{Fore.RED}{ip:<18} FAILED")
     
     if best_ip:
-        print(f"\n{Fore.GREEN}--- Best IP Found ---")
+        print(f"\n{GREEN}--- Best IP Found ---")
         print(f"{Style.BRIGHT}{best_ip}{Style.RESET_ALL} with a latency of {Fore.MAGENTA}{lowest_latency}ms")
         print("\n--- Pinging Best IP ---")
 
