@@ -19,6 +19,7 @@ YELLOW = Fore.YELLOW
 CYAN = Fore.CYAN
 BRIGHT = Style.BRIGHT
 MAGENTA = Fore.MAGENTA
+RESET = Style.RESET_ALL
 
 IP_RANGES_FILE = 'ipranges.txt'
 DEFAULT_SCAN_COUNT = 256
@@ -161,7 +162,7 @@ def main():
     
     if best_ip:
         print(f"\n{GREEN}--- Best IP Found ---")
-        print(f"{Style.BRIGHT}{best_ip}{Style.RESET_ALL} with a latency of {Fore.MAGENTA}{lowest_latency}ms")
+        print(f"{Style.BRIGHT}{best_ip}{RESET} with a latency of {MAGENTA}{lowest_latency}ms")
         print("\n--- Pinging Best IP ---")
 
         count_flag = '-n' if sys.platform == 'win32' else '-c'
