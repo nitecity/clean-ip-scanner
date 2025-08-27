@@ -162,7 +162,7 @@ def main():
     
     if best_ip:
         print(f"\n{GREEN}--- Best IP Found ---")
-        print(f"{Style.BRIGHT}{best_ip}{RESET} with a latency of {MAGENTA}{lowest_latency}ms")
+        print(f"{BRIGHT}{best_ip}{RESET} with a latency of {MAGENTA}{lowest_latency}ms")
         print("\n--- Pinging Best IP ---")
 
         count_flag = '-n' if sys.platform == 'win32' else '-c'
