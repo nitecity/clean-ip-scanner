@@ -158,7 +158,7 @@ def main():
                     lowest_latency = latency
                     best_ip = ip
             else:
-                print(f"{Fore.RED}{ip:<18} FAILED")
+                print(f"{RED}{ip:<18} FAILED")
     
     if best_ip:
         print(f"\n{GREEN}--- Best IP Found ---")
