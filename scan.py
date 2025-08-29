@@ -171,7 +171,7 @@ def main():
         try:
             subprocess.run(ping_command, check=True)
         except (subprocess.CalledProcessError, FileNotFoundError):
-            print(f"{Fore.RED}Could not execute ping command. Please ping the IP manually.")
+            print(f"{RED}Could not execute ping command. Please ping the IP manually.")
 
 
 if __name__ == "__main__":
